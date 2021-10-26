@@ -53,3 +53,5 @@ $route['default_controller'] = 'pweb';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'pweb/login';
+$route['edit'] = 'pweb/edit';
+$route['tambah'] = 'pweb/tambah';

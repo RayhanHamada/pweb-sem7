@@ -16,4 +16,18 @@ class Pweb extends CI_Controller
 		$this->load->view('login');
 		$this->load->view('footer');
 	}
+
+	public function edit()
+	{
+		$this->load->view('header');
+		$this->load->view('edit');
+		$this->load->view('footer');
+	}
+
+	public function tambah()
+	{
+		$this->load->view('header');
+		$this->load->view('tambah');
+		$this->load->view('footer');
+	}
 }
