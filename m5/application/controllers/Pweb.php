@@ -78,6 +78,10 @@ class Pweb extends CI_Controller
 			$this->load->view('header');
 			$this->load->view('tambah');
 			$this->load->view('footer');
+
+			if (isset($_POST['tambah'])) {
+				$this->M_pweb->create();
+			}
 		} else {
 			$this->session->set_flashdata('belum_login', '1');
 			redirect('pweb/login', 'refresh');
