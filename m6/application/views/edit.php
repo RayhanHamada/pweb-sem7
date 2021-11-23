@@ -13,7 +13,6 @@
 				<div class="card-header text-center">Edit Data</div>
 				<div class="card-body">
 					<form action="" method="POST" class="needs-validation" novalidate>
-						<?= isset($_POST['edit']) ?>
 						<div class="form-group">
 							<label for="nama_mhs">Nama Mahasiswa</label>
 							<input type="text" class="form-control" name="nama_mhs" id="nama_mhs" placeholder="Masukan nama mahasiswa" autocomplete="off" required value="<?= $nilai['nama_mahasiswa']; ?>" />
