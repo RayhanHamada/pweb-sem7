@@ -92,4 +92,15 @@ class Pweb extends CI_Controller
 			redirect('pweb/login', 'refresh');
 		}
 	}
+
+	public function delete($id)
+	{
+		if ($this->session->userdata('login') == '1') {
+			$this->M_pweb->delete($id);
+			redirect('pweb', 'refresh');
+		} else {
+			$this->session->set_flashdata('belum_login', '1');
+			redirect('pweb/login', 'refresh');
+		}
+	}
 }

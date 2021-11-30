@@ -84,4 +84,14 @@ class M_pweb extends CI_Model
 			redirect('pweb', 'refresh');
 		}
 	}
+
+	function delete($id)
+	{
+		$this->db->where('id_nilai', $id);
+		$this->db->delete('tbl_nilai');
+		if ($this->db->affected_rows() > 0) {
+			$this->session->set_flashdata('pesan', 'Dihapus');
+			redirect('pweb', 'refresh');
+		}
+	}
 }

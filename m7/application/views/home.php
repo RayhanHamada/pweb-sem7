@@ -17,6 +17,10 @@
 		<div class="alert alert-success" role="alert">
 			Data berhasil diubah
 		</div>
+	<?php elseif ($this->session->flashdata('pesan') == 'Dihapus') : ?>
+		<div class="alert alert-success" role="alert">
+			Data berhasil dihapus
+		</div>
 	<?php endif ?>
 </div>
 
@@ -51,7 +55,7 @@
 					<td class="align-middle text-center"><?= $data['keterangan'] ?></td>
 					<td class="align-middle text-center">
 						<a href="<?= base_url('pweb/edit/' . $data['id_nilai']) ?>" class="align-middle btn btn-success">Edit</a>
-						<a href="" class="align-middle btn btn-danger">Hapus</a>
+						<a href="<?= base_url('pweb/delete/' . $data['id_nilai']) ?>" class="align-middle btn btn-danger" onclick="return confirm('Data ini akan dihapus. Anda yakin ?')">Hapus</a>
 					</td>
 				</tr>
 			<?php endforeach; ?>
